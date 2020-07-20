@@ -248,7 +248,7 @@ type LoadBalancerStrategy struct {
 	// fields for details about their defaults.
 	//
 	// +optional
-	ProviderParameters *ProviderLoadBalancerParameters `json:"providerParameters,omitempty"`
+	ProviderParameters ProviderLoadBalancerParameters `json:"providerParameters,omitempty"`
 }
 
 // ProviderLoadBalancerParameters holds desired load balancer information
@@ -260,8 +260,8 @@ type ProviderLoadBalancerParameters struct {
 	// and "VSphere".
 	//
 	// +unionDiscriminator
-	// +kubebuilder:validation:Required
-	// +required
+	// +kubebuilder:validation:Optional
+	// +optional
 	Type LoadBalancerProviderType `json:"type"`
 
 	// aws provides configuration settings that are specific to AWS
@@ -278,7 +278,7 @@ type ProviderLoadBalancerParameters struct {
 // load balancer. Allowed values are "AWS", "Azure", "BareMetal", "GCP",
 // "OpenStack", and "VSphere".
 //
-// +kubebuilder:validation:Enum=AWS;Azure;BareMetal;GCP;OpenStack;VSphere
+// +kubebuilder:validation:Enum="";AWS;Azure;BareMetal;GCP;OpenStack;VSphere
 type LoadBalancerProviderType string
 
 // AWSLoadBalancerParameters provides configuration settings that are

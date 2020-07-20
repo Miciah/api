@@ -138,6 +138,7 @@ spec:
                             for the load balancer. Allowed values are "AWS", "Azure",
                             "BareMetal", "GCP", "OpenStack", and "VSphere".
                           enum:
+                          - ""
                           - AWS
                           - Azure
                           - BareMetal
@@ -145,8 +146,6 @@ spec:
                           - OpenStack
                           - VSphere
                           type: string
-                      required:
-                      - type
                       type: object
                     scope:
                       description: scope indicates the scope at which the load balancer
@@ -756,6 +755,7 @@ spec:
                             for the load balancer. Allowed values are "AWS", "Azure",
                             "BareMetal", "GCP", "OpenStack", and "VSphere".
                           enum:
+                          - ""
                           - AWS
                           - Azure
                           - BareMetal
@@ -763,8 +763,6 @@ spec:
                           - OpenStack
                           - VSphere
                           type: string
-                      required:
-                      - type
                       type: object
                     scope:
                       description: scope indicates the scope at which the load balancer
