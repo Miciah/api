@@ -112,6 +112,15 @@ spec:
                                 description: classicLoadBalancerParameters holds configuration
                                   parameters for an AWS classic load balancer. Present
                                   only if type is Classic.
+                                properties:
+                                  connectionIdleTimeoutSeconds:
+                                    description: connectionIdleTimeoutSeconds is the
+                                      time interval, in seconds, that a connection
+                                      may be idle before the load balancer closes
+                                      the connection.  If not set, the timeout defaults
+                                      to 60 seconds.
+                                    format: int64
+                                    type: integer
                                 type: object
                               networkLoadBalancer:
                                 description: networkLoadBalancerParameters holds configuration
@@ -898,6 +907,15 @@ spec:
                                 description: classicLoadBalancerParameters holds configuration
                                   parameters for an AWS classic load balancer. Present
                                   only if type is Classic.
+                                properties:
+                                  connectionIdleTimeoutSeconds:
+                                    description: connectionIdleTimeoutSeconds is the
+                                      time interval, in seconds, that a connection
+                                      may be idle before the load balancer closes
+                                      the connection.  If not set, the timeout defaults
+                                      to 60 seconds.
+                                    format: int64
+                                    type: integer
                                 type: object
                               networkLoadBalancer:
                                 description: networkLoadBalancerParameters holds configuration
